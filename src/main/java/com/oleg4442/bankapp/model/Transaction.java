@@ -2,32 +2,32 @@ package com.oleg4442.bankapp.model;
 
 public class Transaction {
 
-    private Long accountId;
-    private Long clientId;
+    private Transaction transaction;
+    private Client client;
     private String transactionType;
     private Long amount;
 
-    public Transaction(Long accountId, Long clientId, String transactionType, Long amount) {
-        this.accountId = accountId;
-        this.clientId = clientId;
+    public Transaction(Transaction transaction, Client client, String transactionType, Long amount) {
+        this.transaction = transaction;
+        this.client = client;
         this.transactionType = transactionType;
         this.amount = amount;
     }
 
-    public Long getAccountId() {
-        return accountId;
+    public Transaction getTransaction() {
+        return transaction;
     }
 
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
+    public void setTransaction(Transaction transaction) {
+        this.transaction = transaction;
     }
 
-    public Long getClientId() {
-        return clientId;
+    public Client getClient() {
+        return client;
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public String getTransactionType() {

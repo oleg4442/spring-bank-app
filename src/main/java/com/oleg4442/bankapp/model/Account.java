@@ -2,20 +2,20 @@ package com.oleg4442.bankapp.model;
 
 public class Account extends BaseEntity {
 
-    private Long clientId;
+    private Client client;
     private Long balance;
 
-    public Account(Long clientId, Long balance) {
-        this.clientId = clientId;
+    public Account(Client client, Long balance) {
+        this.client = client;
         this.balance = balance;
     }
 
-    public Long getClientId() {
-        return clientId;
+    public Client getClient() {
+        return client;
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public Long getBalance() {
